@@ -10,6 +10,7 @@
     "client": "vite client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "build": "tsc -p server && vite build client",
+    "heroku-postbuild": "npm run build",
     "test": "jest"
   },
   "keywords": [],
