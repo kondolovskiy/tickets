@@ -1,5 +1,5 @@
 import React from "react";
-import { TouristView } from "./touristView";
+import { TouristView } from "./TouristView";
 import { UserView } from "./UserView";
 import { USER_TYPES } from "../../../constants";
 
