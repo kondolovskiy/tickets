@@ -1,7 +1,7 @@
 import React from 'react';
 import { Input } from '../../../../components/Input';
 import { Select } from '../../../../components/Select';
-
+import { USER_TYPES } from '../../constants';
 interface HeaderProps { 
     userType: string, 
     search: string, 
@@ -14,7 +14,7 @@ export const Header = ({ userType, search, setUserType, setSearch }: HeaderProps
         <div className="max-w-6xl mx-auto p-4">
             <div className="flex gap-4 mb-8">
                 <Select
-                    options={['local', 'tourist']}
+                    options={Object.values(USER_TYPES)}
                     value={userType}
                     onChange={setUserType}
                 />
