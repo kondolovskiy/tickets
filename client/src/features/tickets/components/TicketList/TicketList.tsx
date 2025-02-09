@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from '../../../../components/Button';
 import { Card } from '../../../../components/Card';
-
-interface Ticket {
+import { useTicketList } from './useTicketList';
+export interface Ticket {
     id: number;
     title: string;
     description: string;
@@ -12,27 +12,7 @@ interface Ticket {
 }
 
 export const TicketList = ({ userType, search }: { userType: string, search: string }) => {
-    const [tickets, setTickets] = useState([]);
-    const [page, setPage] = useState(1);
-    const [totalPages, setTotalPages] = useState(1);
-
-    useEffect(() => {
-        fetchTickets(1);
-    }, [userType, search]);
-
-    const fetchTickets = async (pageNum: number) => {
-        const res = await fetch(`/api/tickets?page=${pageNum}&userType=${userType}&search=${search}`);
-        const data = await res.json();
-        setPage(pageNum);
-        setTickets(data.tickets);
-        setTotalPages(data.totalPages);
-    };
-
-    const handlePageChange = (newPage: number) => {
-        if (newPage >= 1 && newPage <= totalPages) {
-            fetchTickets(newPage);
-        }
-    };
+    const { tickets, page, totalPages, handlePageChange } = useTicketList({ userType, search });
 
     if (tickets.length === 0) {
         return <div>No tickets found</div>;

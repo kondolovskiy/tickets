@@ -1,7 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1739114001046" clover="3.2.0">
-  <project timestamp="1739114001046" name="All files">
-    <metrics statements="35" coveredstatements="35" conditionals="10" coveredconditionals="10" methods="9" coveredmethods="9" elements="54" coveredelements="54" complexity="0" loc="35" ncloc="35" packages="3" files="3" classes="3"/>
+<coverage generated="1739116892087" clover="3.2.0">
+  <project timestamp="1739116892087" name="All files">
+    <metrics statements="52" coveredstatements="52" conditionals="13" coveredconditionals="13" methods="13" coveredmethods="13" elements="78" coveredelements="78" complexity="0" loc="52" ncloc="52" packages="4" files="4" classes="4"/>
+    <package name="client.src.features.tickets.components.TicketList">
+      <metrics statements="17" coveredstatements="17" conditionals="3" coveredconditionals="3" methods="4" coveredmethods="4"/>
+      <file name="useTicketList.ts" path="/Users/v.kondolovskyi/event-tickets/client/src/features/tickets/components/TicketList/useTicketList.ts">
+        <metrics statements="17" coveredstatements="17" conditionals="3" coveredconditionals="3" methods="4" coveredmethods="4"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="11" type="stmt"/>
+        <line num="5" count="11" type="stmt"/>
+        <line num="6" count="11" type="stmt"/>
+        <line num="8" count="11" type="stmt"/>
+        <line num="9" count="5" type="stmt"/>
+        <line num="12" count="11" type="stmt"/>
+        <line num="13" count="6" type="stmt"/>
+        <line num="14" count="6" type="stmt"/>
+        <line num="15" count="6" type="stmt"/>
+        <line num="16" count="6" type="stmt"/>
+        <line num="17" count="6" type="stmt"/>
+        <line num="20" count="11" type="stmt"/>
+        <line num="21" count="3" type="cond" truecount="3" falsecount="0"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="26" count="11" type="stmt"/>
+      </file>
+    </package>
     <package name="client.src.features.tickets.hooks">
       <metrics statements="20" coveredstatements="20" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
       <file name="useTickets.ts" path="/Users/v.kondolovskyi/event-tickets/client/src/features/tickets/hooks/useTickets.ts">
