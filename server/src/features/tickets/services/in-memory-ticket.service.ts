@@ -1,7 +1,7 @@
 import { Ticket } from "../models/ticket.model.js";
 import { TicketStrategy } from "../helpers/ticket.strategy.js";
 
-export class OnMemoryTicketService implements TicketStrategy {
+export class InMemoryTicketService implements TicketStrategy {
     private tickets: Ticket[] = [];
 
     constructor() {

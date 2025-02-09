@@ -1,10 +1,10 @@
-import { OnMemoryTicketService } from '../on-memory-ticket.service';
+import { InMemoryTicketService } from '../in-memory-ticket.service';
 
-describe('OnMemoryTicketService', () => {
-    let service: OnMemoryTicketService;
+describe('InMemoryTicketService', () => {
+    let service: InMemoryTicketService;
 
     beforeEach(() => {
-        service = new OnMemoryTicketService();
+        service = new InMemoryTicketService();
     });
 
     describe('getTickets', () => {

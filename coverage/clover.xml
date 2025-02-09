@@ -1,28 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1739116892087" clover="3.2.0">
-  <project timestamp="1739116892087" name="All files">
-    <metrics statements="52" coveredstatements="52" conditionals="13" coveredconditionals="13" methods="13" coveredmethods="13" elements="78" coveredelements="78" complexity="0" loc="52" ncloc="52" packages="4" files="4" classes="4"/>
+<coverage generated="1739121783034" clover="3.2.0">
+  <project timestamp="1739121783034" name="All files">
+    <metrics statements="61" coveredstatements="59" conditionals="13" coveredconditionals="13" methods="13" coveredmethods="13" elements="87" coveredelements="85" complexity="0" loc="61" ncloc="61" packages="4" files="4" classes="4"/>
     <package name="client.src.features.tickets.components.TicketList">
-      <metrics statements="17" coveredstatements="17" conditionals="3" coveredconditionals="3" methods="4" coveredmethods="4"/>
+      <metrics statements="26" coveredstatements="24" conditionals="3" coveredconditionals="3" methods="4" coveredmethods="4"/>
       <file name="useTicketList.ts" path="/Users/v.kondolovskyi/event-tickets/client/src/features/tickets/components/TicketList/useTicketList.ts">
-        <metrics statements="17" coveredstatements="17" conditionals="3" coveredconditionals="3" methods="4" coveredmethods="4"/>
+        <metrics statements="26" coveredstatements="24" conditionals="3" coveredconditionals="3" methods="4" coveredmethods="4"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
-        <line num="4" count="11" type="stmt"/>
-        <line num="5" count="11" type="stmt"/>
-        <line num="6" count="11" type="stmt"/>
-        <line num="8" count="11" type="stmt"/>
-        <line num="9" count="5" type="stmt"/>
-        <line num="12" count="11" type="stmt"/>
-        <line num="13" count="6" type="stmt"/>
-        <line num="14" count="6" type="stmt"/>
+        <line num="4" count="12" type="stmt"/>
+        <line num="5" count="12" type="stmt"/>
+        <line num="6" count="12" type="stmt"/>
+        <line num="7" count="12" type="stmt"/>
+        <line num="8" count="12" type="stmt"/>
+        <line num="10" count="12" type="stmt"/>
+        <line num="11" count="5" type="stmt"/>
+        <line num="14" count="12" type="stmt"/>
         <line num="15" count="6" type="stmt"/>
         <line num="16" count="6" type="stmt"/>
         <line num="17" count="6" type="stmt"/>
-        <line num="20" count="11" type="stmt"/>
-        <line num="21" count="3" type="cond" truecount="3" falsecount="0"/>
-        <line num="22" count="1" type="stmt"/>
-        <line num="26" count="11" type="stmt"/>
+        <line num="18" count="6" type="stmt"/>
+        <line num="19" count="6" type="stmt"/>
+        <line num="20" count="6" type="stmt"/>
+        <line num="21" count="6" type="stmt"/>
+        <line num="22" count="6" type="stmt"/>
+        <line num="23" count="6" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="28" count="6" type="stmt"/>
+        <line num="32" count="12" type="stmt"/>
+        <line num="33" count="3" type="cond" truecount="3" falsecount="0"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="38" count="12" type="stmt"/>
       </file>
     </package>
     <package name="client.src.features.tickets.hooks">
@@ -64,7 +73,7 @@
     </package>
     <package name="server.src.features.tickets.services">
       <metrics statements="10" coveredstatements="10" conditionals="6" coveredconditionals="6" methods="4" coveredmethods="4"/>
-      <file name="on-memory-ticket.service.ts" path="/Users/v.kondolovskyi/event-tickets/server/src/features/tickets/services/on-memory-ticket.service.ts">
+      <file name="in-memory-ticket.service.ts" path="/Users/v.kondolovskyi/event-tickets/server/src/features/tickets/services/in-memory-ticket.service.ts">
         <metrics statements="10" coveredstatements="10" conditionals="6" coveredconditionals="6" methods="4" coveredmethods="4"/>
         <line num="4" count="1" type="stmt"/>
         <line num="5" count="8" type="stmt"/>
