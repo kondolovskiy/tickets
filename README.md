@@ -2,6 +2,12 @@
 
 A full-stack application for managing event tickets built with React, TypeScript, and Express.
 
+<div align="center">
+
+[Live Demo](https://events-tickets-77267b07a420.herokuapp.com/)
+
+</div>
+
 ## Prerequisites
 
 - Node.js (version 18 or higher recommended)
