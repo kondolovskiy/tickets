@@ -1,5 +1,5 @@
 import { Request, Response, Router } from 'express';
-import ticketContext from '../services/ticket.service';
+import ticketContext from '../services/ticket.service.js';
 
 const router = Router();
 

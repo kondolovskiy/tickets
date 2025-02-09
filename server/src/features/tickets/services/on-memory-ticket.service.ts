@@ -1,5 +1,5 @@
-import { Ticket } from "../models/ticket.model";
-import { TicketStrategy } from "../helpers/ticket.strategy";
+import { Ticket } from "../models/ticket.model.js";
+import { TicketStrategy } from "../helpers/ticket.strategy.js";
 
 export class OnMemoryTicketService implements TicketStrategy {
     private tickets: Ticket[] = [];

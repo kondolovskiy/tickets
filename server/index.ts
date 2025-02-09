@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import ticketRoutes from './src/features/tickets/controllers/ticket.controller';
+import ticketRoutes from './src/features/tickets/controllers/ticket.controller.js';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -16,13 +16,10 @@ app.use(express.json());
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Add this before your routes
 app.use(express.static(path.join(__dirname, '../../client/dist')));
 
-// Routes
 app.use('/api', ticketRoutes);
 
-// Add this after all your API routes
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../../client/dist/index.html'));
 });

@@ -1,4 +1,4 @@
-import { Ticket } from "../models/ticket.model";
+import { Ticket } from "../models/ticket.model.js";
 
 interface TicketStrategy {
     getTickets(page: number, userType: string, search: string): {
