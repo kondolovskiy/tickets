@@ -13,10 +13,17 @@ export interface Ticket {
 }
 
 export const TicketList = ({ userType, search }: { userType: string, search: string }) => {
-    const { tickets, page, totalPages, handlePageChange, isLoading } = useTicketList({ userType, search });
+    const { tickets, page, totalPages, handlePageChange, isLoading, error } = useTicketList({ userType, search });
+
+    if (error) {
+        return <div className='mx-auto p-4 text-center'>
+            <p className='mb-4'>{error}</p>
+            <Button onClick={() => window.location.reload()}>Try again</Button>
+        </div>;
+    }
 
     if (isLoading) {
-        return <div className='max-w-6xl mx-auto p-4'>Loading...</div>;
+        return <div className='mx-auto p-4 text-center'>Loading...</div>;
     }
 
     if (tickets.length === 0) {

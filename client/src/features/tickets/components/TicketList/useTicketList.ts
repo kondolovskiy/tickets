@@ -5,6 +5,7 @@ export const useTicketList = ({ userType, search }: { userType: string, search: 
     const [page, setPage] = useState(1);
     const [totalPages, setTotalPages] = useState(1);
     const [isLoading, setIsLoading] = useState(true);
+    const [error, setError] = useState("");
 
     useEffect(() => {
         fetchTickets(1);
@@ -12,12 +13,20 @@ export const useTicketList = ({ userType, search }: { userType: string, search: 
 
     const fetchTickets = async (pageNum: number) => {
         setIsLoading(true);
-        const res = await fetch(`/api/tickets?page=${pageNum}&userType=${userType}&search=${search}`);
-        const data = await res.json();
-        setPage(pageNum);
-        setTickets(data.tickets);
-        setTotalPages(data.totalPages);
-        setIsLoading(false);
+        setError("");
+        try {
+            const res = await fetch(`/api/tickets?page=${pageNum}&userType=${userType}&search=${search}`);
+            const data = await res.json();
+            setPage(pageNum);
+            setTickets(data.tickets);
+            setTotalPages(data.totalPages);
+            setIsLoading(false);
+        } catch (error) {
+            console.error('Error fetching tickets:', error);
+            setError("Error fetching tickets");
+        } finally {
+            setIsLoading(false);
+        }
     };
 
     const handlePageChange = (newPage: number) => {
@@ -26,6 +35,6 @@ export const useTicketList = ({ userType, search }: { userType: string, search: 
         }
     };
 
-    return { tickets, page, totalPages, handlePageChange, isLoading };
+    return { tickets, page, totalPages, handlePageChange, isLoading, error };
     
 }
