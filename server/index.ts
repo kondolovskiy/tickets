@@ -3,7 +3,6 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import ticketRoutes from './src/features/tickets/controllers/ticket.controller';
 import path from 'path';
-import { fileURLToPath } from 'url';
 
 dotenv.config();
 
