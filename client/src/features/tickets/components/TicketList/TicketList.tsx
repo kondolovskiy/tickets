@@ -13,10 +13,14 @@ export interface Ticket {
 }
 
 export const TicketList = ({ userType, search }: { userType: string, search: string }) => {
-    const { tickets, page, totalPages, handlePageChange } = useTicketList({ userType, search });
+    const { tickets, page, totalPages, handlePageChange, isLoading } = useTicketList({ userType, search });
+
+    if (isLoading) {
+        return <div className='max-w-6xl mx-auto p-4'>Loading...</div>;
+    }
 
     if (tickets.length === 0) {
-        return <div>No tickets found</div>;
+        return <div className='max-w-6xl mx-auto p-4'>No tickets found</div>;
     }
 
     return (
