@@ -1,18 +1,19 @@
 import { useState } from "react";
 import { useDebounce } from 'use-debounce';
+import { USER_TYPES, UserType } from "../constants";
 
 export const useTickets = () => {
     const [userType, setUserType] = useState(() => {
         const params = new URLSearchParams(window.location.search);
         const userTypeParam = params.get('userType');
         
-        if (userTypeParam === 'local' || userTypeParam === 'tourist') {
+        if (userTypeParam && Object.values(USER_TYPES).includes(userTypeParam as UserType)) {
             return userTypeParam;
         } else {
             const newUrl = new URL(window.location.href);
-            newUrl.searchParams.set('userType', 'local');
+            newUrl.searchParams.set('userType', USER_TYPES.LOCAL);
             window.history.pushState({}, '', newUrl);
-            return 'local';
+            return USER_TYPES.LOCAL;
         }
     });
     const [search, setSearch] = useState('');
